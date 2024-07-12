@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="A melhor plataforma de trade do Brasil"
+        />
+        <link
+            rel="icon"
+            href="https://coyote-trade.vercel.app/favicon.ico"
+            type="image/x-icon"
+            sizes="16x16"
+        />
+        <title>CoyoteTrade</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div class="lightDark" onclick="toggleMode()">
+                <button></button>
+            </div>
+            <div class="topText">Create your account</div>
+            <div class="inputContainer">
+                <input class="nameInput all" placeholder="Name" required />
+                <input
+                    class="surnameInput all"
+                    placeholder="Surname"
+                    required
+                />
+                <input
+                    type="email"
+                    class="emailInput all"
+                    placeholder="Email"
+                    required
+                />
+                <input
+                    type=""
+                    class="addressInput all"
+                    placeholder="Address"
+                    required
+                />
+                <input
+                    class="bdayInput all"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"
+                    placeholder="Birthday"
+                />
+                <input
+                    type="password"
+                    class="passwordInput all"
+                    placeholder="Password"
+                    required
+                />
+                <div class="eye" onclick="toggleEye()">
+                    <button></button>
+                </div>
+            </div>
+            <div class="accContainer">
+                <div class="createAccBtn">Create account</div>
+                <div class="bottomText">
+                    Already Have an account? <span class="logIn">Log in</span>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
