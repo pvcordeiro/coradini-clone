@@ -52,8 +52,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
-    padding: 1rem;
+    height: 100%;
+    padding: 0;
+    overflow: auto;
+}
+
+.mainContainer {
+    position: relative;
+    border: 2px solid var(--lavender);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 47rem;
+    width: 28.125rem;
+    border-radius: 12px;
+    background-color: var(--ctnBackground);
+    padding: 7rem 3rem 2rem;
+    gap: 1.5rem;
+    box-shadow: 0px 10px 30px var(--shadow);
+    animation-delay: 0.3s;
+    overflow: auto;
 }
 
 .lightDark {
@@ -74,23 +93,6 @@ body {
     background: transparent;
     cursor: pointer;
     outline: none;
-}
-
-.mainContainer {
-    position: relative;
-    border: 2px solid var(--lavender);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 47rem;
-    width: 28.125rem;
-    border-radius: 12px;
-    background-color: var(--ctnBackground);
-    padding: 7rem 3rem 2rem;
-    gap: 1.5rem;
-    box-shadow: 0px 10px 30px var(--shadow);
-    animation-delay: 0.3s;
 }
 
 .mainContainer,
@@ -281,7 +283,6 @@ body {
 @media screen and (max-width: 470px) {
     body {
         padding: 4rem 1rem;
-        
     }
 
     .mainContainer {
