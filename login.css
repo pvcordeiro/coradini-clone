@@ -9,12 +9,12 @@
     --font-input: hsl(220, 10%, 65%);
     --font-text: hsl(233.79, 16.2%, 35.1%);
     --shadow: hsl(0, 0%, 78.43%);
-    --sunMoon: url(../img/light.jpg);
+    --sunMoon: url(./img/light.jpg);
 
-    --eye-open-color-light: url(../img/openLight.jpg);
-    --eye-closed-color-light: url(../img/closedLight.jpg);
-    --eye-open-color-dark: url(../img/openDark.jpg);
-    --eye-closed-color-dark: url(../img/closedDark.jpg);
+    --eye-open-color-light: url(./img/openLight.jpg);
+    --eye-closed-color-light: url(./img/closedLight.jpg);
+    --eye-open-color-dark: url(./img/openDark.jpg);
+    --eye-closed-color-dark: url(./img/closedDark.jpg);
 
     user-select: none;
 }
@@ -24,14 +24,14 @@
     --ctnBackground: hsl(240, 21.05%, 14.9%);
     --font-text: hsl(226.15, 63.93%, 88.04%);
     --shadow: none;
-    --sunMoon: url(../img/dark.jpg);
-    --eye-open-color: url(../img/openDark.jpg);
-    --eye-closed-color: url(../img/closedDark.jpg);
+    --sunMoon: url(./img/dark.jpg);
+    --eye-open-color: url(./img/openDark.jpg);
+    --eye-closed-color: url(./img/closedDark.jpg);
 }
 
 .eyeToggle {
-    --eye-open-color: url(../img/openDark.jpg);
-    --eye-closed-color: url(../img/closedDark.jpg);
+    --eye-open-color: url(./img/openDark.jpg);
+    --eye-closed-color: url(./img/closedDark.jpg);
     background: var(--eye-open-color) no-repeat center;
 }
 
