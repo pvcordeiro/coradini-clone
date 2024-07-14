@@ -57,7 +57,6 @@ body {
 }
 
 .lightDark {
-    border-radius: 50%;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -65,7 +64,6 @@ body {
     height: 42px;
     background: var(--sunMoon) no-repeat center;
     background-size: cover;
-    cursor: pointer;
 }
 
 .lightDark button {
@@ -75,6 +73,7 @@ body {
     border: none;
     background: transparent;
     cursor: pointer;
+    outline: none;
 }
 
 .mainContainer {
@@ -83,13 +82,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 35.75rem;
     width: 28.125rem;
     border-radius: 12px;
     background-color: var(--ctnBackground);
-    padding: 7rem 3rem 2rem;
-    gap: 1.5rem;
+    padding: 6.7rem 3rem 2rem;
     box-shadow: 0px 10px 30px var(--shadow);
     animation-delay: 0.3s;
 }
@@ -107,7 +105,7 @@ body {
     font-weight: 800;
     text-align: center;
     color: var(--font-text);
-    flex: 1;
+    padding-bottom: 4rem;
     animation-delay: 0.4s;
 }
 
@@ -116,13 +114,11 @@ body {
 }
 
 .inputContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 10.68rem);
-    grid-template-rows: repeat(6, 3.25rem);
-    gap: 1.5rem 0.5rem;
-    z-index: 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     animation-delay: 0.6s;
+    width: 100%;
 }
 
 .all {
@@ -135,7 +131,6 @@ body {
     background-color: var(--ctnBackground);
     padding: 0.75rem;
     font-size: 1rem;
-    box-sizing: border-box;
     width: 100%;
     color: var(--lavender);
 }
@@ -146,65 +141,24 @@ body {
     transition: all 250ms linear;
 }
 
-.nameInput {
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-    animation-delay: 0.6s;
-}
-
-.surnameInput {
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
-    animation-delay: 2s;
-}
-
-.emailInput {
-    grid-column: 1 / 3;
-    grid-row: 2 / 2;
-}
-
-.addressInput {
-    grid-column: 1 / 3;
-    grid-row: 3 / 3;
-}
-
-.bdayInput {
-    cursor: pointer;
-    grid-column: 1 / 3;
-    grid-row: 4 / 4;
-    /* font-size: 0.875rem;
-    font-weight: 500; */
-}
-
-.bdayInput:hover {
-    background-color: hsl(220, 14.29%, 95.88%);
-}
-
 .passwordContainer {
-    grid-column: 1 / 3;
-    grid-row: 5 / 5;
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .passwordInput {
-    /* flex: 1; */
     padding-right: 2.5rem;
 }
 
 .eye {
-    border-radius: 50%;
     position: absolute;
     right: 0.7rem;
     width: 27px;
     height: 24px;
     background: var(--eye-closed-color-light) no-repeat center;
     background-size: cover;
-    cursor: pointer;
-    z-index: 1;
-    grid-column: 1 / 3;
-    grid-row: 5 / 5;
 }
 
 .eye button {
@@ -214,6 +168,69 @@ body {
     border: none;
     background: transparent;
     cursor: pointer;
+    outline: none;
+}
+
+.rememberLabel .rememberBtn {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.rememberLabel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-size: 0.75rem;
+    user-select: none;
+    gap: 0.3rem;
+    color: var(--font-text);
+    font-weight: 500;
+    padding-bottom: 3rem;
+}
+
+.rememberLabel .checkMark {
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--ctnBackground);
+    border: 1px solid var(--lavender);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.rememberLabel .rememberBtn:checked ~ .checkMark {
+    background-color: var(--lavender);
+    border-color: var(--lavender);
+}
+
+.rememberLabel .rememberBtn:checked ~ .checkMark::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+}
+
+.logInAccBtn {
+    color: white;
+    background-color: var(--lavender);
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 12px;
+    height: 3.5rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    border: none;
+}
+
+.logInAccBtn:hover {
+    background-color: var(--lavender-active);
 }
 
 .accContainer {
@@ -226,35 +243,19 @@ body {
     animation-delay: 0.8s;
 }
 
-.createAccBtn {
-    color: white;
-    background-color: var(--lavender);
-    font-weight: 500;
-    font-size: 1rem;
-    border-radius: 12px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    border: none;
-    grid-column: 1 / 3;
-    grid-row: 6 / 6;
-}
-
-.createAccBtn:hover {
-    background-color: var(--lavender-active);
-}
-
 .bottomText {
     font-size: 0.75rem;
     color: var(--font-text);
+    padding-top: 1rem;
 }
 
-.logIn {
+.createAccount {
     font-size: 0.75rem;
     color: var(--lavender);
     position: relative;
 }
 
-.logIn::after {
+.createAccount::after {
     content: "";
     position: absolute;
     left: 0;
@@ -265,8 +266,8 @@ body {
     transition: width 0.3s ease-in-out;
 }
 
-.logIn:hover::after,
-.logIn:hover {
+.createAccount:hover::after,
+.createAccount:hover {
     width: 100%;
     cursor: pointer;
 }
@@ -279,5 +280,14 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .rememberLabel {
+        padding-bottom: 1rem;
+    }
+    .bottomText {
+        padding-top: 1.3rem;
     }
 }
