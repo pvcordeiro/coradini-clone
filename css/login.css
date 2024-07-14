@@ -9,12 +9,14 @@
     --font-input: hsl(220, 10%, 65%);
     --font-text: hsl(233.79, 16.2%, 35.1%);
     --shadow: hsl(0, 0%, 78.43%);
-    --sunMoon: url(./img/light.jpg);
+    --sunMoon: url(../img/light.jpg);
 
-    --eye-open-color-light: url(./img/openLight.jpg);
-    --eye-closed-color-light: url(./img/closedLight.jpg);
-    --eye-open-color-dark: url(./img/openDark.jpg);
-    --eye-closed-color-dark: url(./img/closedDark.jpg);
+    --eye-open-color-light: url(../img/openLight.jpg);
+    --eye-closed-color-light: url(../img/closedLight.jpg);
+    --eye-open-color-dark: url(../img/openDark.jpg);
+    --eye-closed-color-dark: url(../img/closedDark.jpg);
+
+    user-select: none;
 }
 
 .toggle {
@@ -22,14 +24,14 @@
     --ctnBackground: hsl(240, 21.05%, 14.9%);
     --font-text: hsl(226.15, 63.93%, 88.04%);
     --shadow: none;
-    --sunMoon: url(./img/dark.jpg);
-    --eye-open-color: url(./img/openDark.jpg);
-    --eye-closed-color: url(./img/closedDark.jpg);
+    --sunMoon: url(../img/dark.jpg);
+    --eye-open-color: url(../img/openDark.jpg);
+    --eye-closed-color: url(../img/closedDark.jpg);
 }
 
 .eyeToggle {
-    --eye-open-color: url(./img/openDark.jpg);
-    --eye-closed-color: url(./img/closedDark.jpg);
+    --eye-open-color: url(../img/openDark.jpg);
+    --eye-closed-color: url(../img/closedDark.jpg);
     background: var(--eye-open-color) no-repeat center;
 }
 
@@ -82,8 +84,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 688px;
-    width: 450px;
+    height: 35.75rem;
+    width: 28.125rem;
     border-radius: 12px;
     background-color: var(--ctnBackground);
     padding: 7rem 3rem 2rem;
@@ -116,7 +118,7 @@ body {
 .inputContainer {
     display: grid;
     grid-template-columns: repeat(2, 10.68rem);
-    grid-template-rows: repeat(5, 3.25rem);
+    grid-template-rows: repeat(6, 3.25rem);
     gap: 1.5rem 0.5rem;
     z-index: 0;
     position: relative;
@@ -178,16 +180,23 @@ body {
     background-color: hsl(220, 14.29%, 95.88%);
 }
 
-.passwordInput {
+.passwordContainer {
     grid-column: 1 / 3;
     grid-row: 5 / 5;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.passwordInput {
+    /* flex: 1; */
+    padding-right: 2.5rem;
 }
 
 .eye {
     border-radius: 50%;
     position: absolute;
     right: 0.7rem;
-    bottom: 0.9rem;
     width: 27px;
     height: 24px;
     background: var(--eye-closed-color-light) no-repeat center;
@@ -218,17 +227,16 @@ body {
 }
 
 .createAccBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     background-color: var(--lavender);
     font-weight: 500;
     font-size: 1rem;
-    width: 100%;
-    height: 3.5rem;
     border-radius: 12px;
     cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    grid-column: 1 / 3;
+    grid-row: 6 / 6;
 }
 
 .createAccBtn:hover {

@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --lavender: hsl(230.94, 97.2%, 71.96%);
+    --lavender-active: hsl(235, 91%, 67%);
+    --background: hsl(228, 20%, 95%);
+    --ctnBackground: white;
+    --border: hsl(220, 13.04%, 90.98%);
+    --font-input: hsl(220, 10%, 65%);
+    --font-text: hsl(233.79, 16.2%, 35.1%);
+    --shadow: hsl(0, 0%, 78.43%);
+    --sunMoon: url(../img/light.jpg);
+
+    --eye-open-color-light: url(../img/openLight.jpg);
+    --eye-closed-color-light: url(../img/closedLight.jpg);
+    --eye-open-color-dark: url(../img/openDark.jpg);
+    --eye-closed-color-dark: url(../img/closedDark.jpg);
+
+    user-select: none;
+}
+
+.toggle {
+    --background: hsl(240, 21.31%, 11.96%);
+    --ctnBackground: hsl(240, 21.05%, 14.9%);
+    --font-text: hsl(226.15, 63.93%, 88.04%);
+    --shadow: none;
+    --sunMoon: url(../img/dark.jpg);
+    --eye-open-color: url(../img/openDark.jpg);
+    --eye-closed-color: url(../img/closedDark.jpg);
+}
+
+.eyeToggle {
+    --eye-open-color: url(../img/openDark.jpg);
+    --eye-closed-color: url(../img/closedDark.jpg);
+    background: var(--eye-open-color) no-repeat center;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    padding: 1rem;
+}
+
+.lightDark {
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
+    background: var(--sunMoon) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.lightDark button {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mainContainer {
+    position: relative;
+    border: 2px solid var(--lavender);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 43rem;
+    width: 28.125rem;
+    border-radius: 12px;
+    background-color: var(--ctnBackground);
+    padding: 7rem 3rem 2rem;
+    gap: 1.5rem;
+    box-shadow: 0px 10px 30px var(--shadow);
+    animation-delay: 0.3s;
+}
+
+.mainContainer,
+.topText,
+.inputContainer,
+.accContainer {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.topText {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--font-text);
+    flex: 1;
+    animation-delay: 0.4s;
+}
+
+::placeholder {
+    color: var(--font-input);
+}
+
+.inputContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 10.68rem);
+    grid-template-rows: repeat(6, 3.25rem);
+    gap: 1.5rem 0.5rem;
+    z-index: 0;
+    position: relative;
+    animation-delay: 0.6s;
+}
+
+.all {
+    outline: transparent;
+    border: 2px solid var(--border);
+    background-color: var(--background);
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    border-radius: 12px;
+    background-color: var(--ctnBackground);
+    padding: 0.75rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--lavender);
+}
+
+.all:focus {
+    border: 2px solid var(--lavender);
+    outline: transparent;
+    transition: all 250ms linear;
+}
+
+.nameInput {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    animation-delay: 0.6s;
+}
+
+.surnameInput {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+    animation-delay: 2s;
+}
+
+.emailInput {
+    grid-column: 1 / 3;
+    grid-row: 2 / 2;
+}
+
+.addressInput {
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+}
+
+.bdayInput {
+    cursor: pointer;
+    grid-column: 1 / 3;
+    grid-row: 4 / 4;
+    /* font-size: 0.875rem;
+    font-weight: 500; */
+}
+
+.bdayInput:hover {
+    background-color: hsl(220, 14.29%, 95.88%);
+}
+
+.passwordContainer {
+    grid-column: 1 / 3;
+    grid-row: 5 / 5;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.passwordInput {
+    /* flex: 1; */
+    padding-right: 2.5rem;
+}
+
+.eye {
+    border-radius: 50%;
+    position: absolute;
+    right: 0.7rem;
+    width: 27px;
+    height: 24px;
+    background: var(--eye-closed-color-light) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+    grid-column: 1 / 3;
+    grid-row: 5 / 5;
+}
+
+.eye button {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.accContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    animation-delay: 0.8s;
+}
+
+.createAccBtn {
+    color: white;
+    background-color: var(--lavender);
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    grid-column: 1 / 3;
+    grid-row: 6 / 6;
+}
+
+.createAccBtn:hover {
+    background-color: var(--lavender-active);
+}
+
+.bottomText {
+    font-size: 0.75rem;
+    color: var(--font-text);
+}
+
+.logIn {
+    font-size: 0.75rem;
+    color: var(--lavender);
+    position: relative;
+}
+
+.logIn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--lavender);
+    transition: width 0.3s ease-in-out;
+}
+
+.logIn:hover::after,
+.logIn:hover {
+    width: 100%;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

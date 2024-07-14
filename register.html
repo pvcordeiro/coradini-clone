@@ -14,7 +14,7 @@
             sizes="16x16"
         />
         <title>CoyoteTrade</title>
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./css/register.css" />
     </head>
     <body>
         <div class="mainContainer">
@@ -22,48 +22,66 @@
                 <button></button>
             </div>
             <div class="topText">Create your account</div>
-            <div class="inputContainer">
-                <input class="nameInput all" placeholder="Name" required />
+            <form class="inputContainer">
+                <input
+                    class="nameInput all"
+                    placeholder="Name"
+                    required
+                    aria-label="Name"
+                />
                 <input
                     class="surnameInput all"
                     placeholder="Surname"
                     required
+                    aria-label="Surname"
                 />
                 <input
                     type="email"
                     class="emailInput all"
                     placeholder="Email"
                     required
+                    aria-label="Email"
                 />
                 <input
                     type=""
                     class="addressInput all"
                     placeholder="Address"
                     required
+                    aria-label="Address"
                 />
                 <input
                     class="bdayInput all"
                     onfocus="(this.type='date')"
                     onblur="(this.type='text')"
                     placeholder="Birthday"
+                    aria-label="Birthday"
                 />
-                <input
-                    type="password"
-                    class="passwordInput all"
-                    placeholder="Password"
-                    required
-                />
-                <div class="eye" onclick="toggleEye()">
-                    <button></button>
+                <div class="passwordContainer">
+                    <input
+                        type="password"
+                        class="passwordInput all"
+                        placeholder="Password"
+                        required
+                        aria-label="Password"
+                    />
+                    <div
+                        class="eye"
+                        onclick="toggleEye()"
+                        aria-label="Toggle password visibility"
+                    >
+                        <button type="button"></button>
+                    </div>
                 </div>
-            </div>
+                <button class="createAccBtn" type="submit">
+                    Create account
+                </button>
+            </form>
             <div class="accContainer">
-                <div class="createAccBtn">Create account</div>
                 <div class="bottomText">
                     Already Have an account? <span class="logIn">Log in</span>
                 </div>
             </div>
         </div>
-        <script src="./script.js"></script>
+        <script src="./js/register.js"></script>
     </body>
 </html>
