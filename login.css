@@ -171,23 +171,29 @@ body {
     outline: none;
 }
 
-.rememberLabel .rememberBtn {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
 .rememberLabel {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     cursor: pointer;
     font-size: 0.75rem;
-    user-select: none;
     gap: 0.3rem;
     color: var(--font-text);
     font-weight: 500;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    margin-right: 15.938rem;
+}
+
+.rememberLabel .rememberBtn {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    /* pointer-events: auto; */
+}
+
+.rememberLabel .rememberText {
+    /* pointer-events: auto; */
+    cursor: pointer;
 }
 
 .rememberLabel .checkMark {
@@ -198,6 +204,7 @@ body {
     border: 1px solid var(--lavender);
     border-radius: 4px;
     transition: all 0.2s;
+    pointer-events: auto;
 }
 
 .rememberLabel .rememberBtn:checked ~ .checkMark {
@@ -253,6 +260,7 @@ body {
     font-size: 0.75rem;
     color: var(--lavender);
     position: relative;
+    text-decoration: none;
 }
 
 .createAccount::after {
@@ -285,7 +293,8 @@ body {
 
 @media screen and (max-width: 395px) {
     .rememberLabel {
-        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 9.125rem;
     }
     .bottomText {
         padding-top: 1.3rem;

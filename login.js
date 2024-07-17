@@ -11,7 +11,7 @@ function toggleEye() {
 
     updateEyeStyle();
 
-    const passwordInput = document.querySelector(".passwordInput");
+    const passwordInput = document.querySelector(".passwordInput"); 
     passwordInput.type = eyeElement.classList.contains("eyeToggle")
         ? "text"
         : "password";

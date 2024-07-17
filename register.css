@@ -248,6 +248,7 @@ body {
     font-size: 0.75rem;
     color: var(--lavender);
     position: relative;
+    text-decoration: none;
 }
 
 .logIn::after {
