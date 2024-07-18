@@ -291,7 +291,7 @@ body {
     }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 465px) {
     .rememberLabel {
         margin-bottom: 1rem;
         margin-right: 9.125rem;
