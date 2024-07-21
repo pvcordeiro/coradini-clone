@@ -11,10 +11,10 @@
     --shadow: hsl(0, 0%, 78.43%);
     --sunMoon: url(../img/light.jpg);
 
-    --eye-open-color-light: url(https://pvcordeiro.github.io/coradini-clone/img/openLight.jpg);
-    --eye-closed-color-light: url(https://pvcordeiro.github.io/coradini-clone/img/closedLight.jpg);
-    --eye-open-color-dark: url(https://pvcordeiro.github.io/coradini-clone/img/openDark.jpg);
-    --eye-closed-color-dark: url(https://pvcordeiro.github.io/coradini-clone/img/closedDark.jpg);
+    --eye-open-color-light: url(../img/openLight.jpg);
+    --eye-closed-color-light: url(../img/closedLight.jpg);
+    --eye-open-color-dark: url(../img/openDark.jpg);
+    --eye-closed-color-dark: url(../img/closedDark.jpg);
 
     user-select: none;
 }
@@ -25,13 +25,13 @@
     --font-text: hsl(226.15, 63.93%, 88.04%);
     --shadow: none;
     --sunMoon: url(../img/dark.jpg);
-    --eye-open-color: url(https://pvcordeiro.github.io/coradini-clone/img/openDark.jpg);
-    --eye-closed-color: url(https://pvcordeiro.github.io/coradini-clone/img/closedDark.jpg);
+    --eye-open-color: url(../img/openDark.jpg);
+    --eye-closed-color: url(../img/closedDark.jpg);
 }
 
 .eyeToggle {
-    --eye-open-color: url(https://pvcordeiro.github.io/coradini-clone/img/openDark.jpg);
-    --eye-closed-color: url(https://pvcordeiro.github.io/coradini-clone/img/closedDark.jpg);
+    --eye-open-color: url(../img/openDark.jpg);
+    --eye-closed-color: url(../img/closedDark.jpg);
     background: var(--eye-open-color) no-repeat center;
 }
 
